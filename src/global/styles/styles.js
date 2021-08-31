@@ -9,9 +9,8 @@ export const theme = {
 }
 
 export const AppContainer = styled.div`
-  height: 100vh;
-  height: -webkit-fill-available;
-  height: fill-available;
+  min-height: 100vh;
+
   background-color: ${theme.bgColor};
   color: ${theme.textColor};
   font-family: "Roboto", sans-serif;

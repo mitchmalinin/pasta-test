@@ -1,9 +1,10 @@
+import "./global/styles/reset.css"
 import { useState } from "react"
 import WelcomeStage from "./components/Stages/Welcome/WelcomeStage"
 import GameStage from "./components/Stages/Game/GameStage"
-import { AppContainer } from "./global/styles"
+import { AppContainer } from "./global/styles/styles"
 const App = () => {
-  const [stage, setStage] = useState("welcome")
+  const [stage, setStage] = useState("game")
 
   const renderStage = () => {
     switch (stage) {

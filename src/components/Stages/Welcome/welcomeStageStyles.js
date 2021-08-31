@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../../global/styles"
+import { theme } from "../../../global/styles/styles"
 
 export const WelcomeStageContainer = styled.div`
   position: relative;
@@ -22,7 +22,7 @@ export const Title = styled.h1`
 export const BTN = styled.button`
   border-radius: 25px;
   background-color: ${theme.btnBackgroundDark};
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 1em 1.5em;
   border: none;
   color: ${theme.textColor};
