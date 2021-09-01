@@ -354,5 +354,5 @@ template {
   background-color: #ec6758;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }

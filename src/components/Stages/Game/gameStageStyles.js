@@ -7,7 +7,6 @@ export const GameStageContainer = styled.div`
     position: absolute;
     bottom: 0%;
     left: 50%;
-
     transform: translate(-50%, 0%);
     filter: ${({ stoveGlow }) =>
       stoveGlow
@@ -44,10 +43,12 @@ export const ItemsContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
   position: relative;
+  margin-bottom: 9em;
 
   @media only screen and (min-width: 1020px) {
     grid-template-columns: repeat(3, 1fr);
     margin-top: 0;
+    margin-bottom: 0em;
     img {
       height: 130px;
     }
