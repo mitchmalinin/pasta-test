@@ -16,6 +16,7 @@ export const GameStageContainer = styled.div`
   @media only screen and (min-width: 1020px) {
     min-width: 600px;
     margin-top: 0.5em;
+    margin-bottom: 15em;
     align-self: flex-start;
     img {
       height: 200px;
