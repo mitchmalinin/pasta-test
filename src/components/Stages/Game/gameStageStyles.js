@@ -2,11 +2,12 @@ import styled from "styled-components"
 import { theme } from "../../../global/styles/styles"
 
 export const GameStageContainer = styled.div`
+  margin-top: 1em;
   .stove {
     position: absolute;
     bottom: 0%;
     left: 50%;
-    height: 160px;
+
     transform: translate(-50%, 0%);
     filter: ${({ stoveGlow }) =>
       stoveGlow
@@ -19,11 +20,15 @@ export const GameStageContainer = styled.div`
     margin-top: 0.5em;
     margin-bottom: 12em;
     align-self: center;
+
+    .stove {
+      height: 170px;
+    }
   }
 `
 export const Header = styled.h2`
   font-weight: 400;
-  margin: 1em 0 0.4em 0;
+  margin: 0.4em 0 0.4em 0;
 
   @media only screen and (min-width: 1020px) {
     margin: 0;
@@ -32,7 +37,7 @@ export const Header = styled.h2`
 export const SubHeader = styled.h3`
   font-style: italic;
   font-weight: 300;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 `
 export const ItemsContainer = styled.div`
   display: grid;
@@ -42,7 +47,7 @@ export const ItemsContainer = styled.div`
 
   @media only screen and (min-width: 1020px) {
     grid-template-columns: repeat(3, 1fr);
-
+    margin-top: 0;
     img {
       height: 130px;
     }

@@ -9,7 +9,7 @@ export const theme = {
 }
 
 export const AppContainer = styled.div`
-  min-height: 100vh;
+  min-height: fit-content;
   position: relative;
   background-color: ${theme.bgColor};
   color: ${theme.textColor};
