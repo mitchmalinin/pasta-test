@@ -28,7 +28,6 @@ export const GameStageContainer = styled.div`
 export const Header = styled.h2`
   font-weight: 400;
   margin: 0.4em 0 0.4em 0;
-
   @media only screen and (min-width: 1020px) {
     margin: 0;
   }

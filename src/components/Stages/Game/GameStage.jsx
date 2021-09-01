@@ -87,7 +87,7 @@ const GameStage = ({
             setStage("finished")
           }, 1500)
           setHeader({
-            header: "Amazing, truly well done!",
+            header: "Amazing, I'm so proud you can cook pasta!",
             subHeader: "",
           })
         } else {
