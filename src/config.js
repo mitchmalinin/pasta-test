@@ -1,5 +1,5 @@
 const configProd = {
-  API_URI: "https://hedge-landing-server.herokuapp.com",
+  API_URI: "https://pepper-pasta-server.herokuapp.com",
 }
 // development specific config goes here
 const configDev = {
