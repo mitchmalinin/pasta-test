@@ -31,9 +31,10 @@ export const UserInput = styled.input`
   border-radius: 25px;
   padding: 1em;
   color: ${theme.textColor};
-
+  outline: none;
   &::placeholder {
     color: ${theme.textColor};
+    font-weight: 300;
   }
 `
 export const BTN = styled.button`

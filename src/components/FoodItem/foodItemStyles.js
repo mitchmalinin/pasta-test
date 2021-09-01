@@ -11,4 +11,11 @@ export const FoodItemContainer = styled.div`
   img {
     height: 120px;
   }
+
+  @media only screen and (min-width: 1020px) {
+    margin-top: 2em;
+    img {
+      height: 200px;
+    }
+  }
 `

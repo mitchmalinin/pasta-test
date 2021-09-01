@@ -12,6 +12,15 @@ export const WelcomeStageContainer = styled.div`
     position: absolute;
     bottom: -430px;
   }
+
+  @media only screen and (min-width: 1020px) {
+    gap: 3em;
+    img {
+      bottom: 0;
+      position: relative;
+      width: 330px;
+    }
+  }
 `
 
 export const Title = styled.h1`

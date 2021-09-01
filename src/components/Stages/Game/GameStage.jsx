@@ -6,16 +6,22 @@ import {
   SubHeader,
   ItemsContainer,
 } from "./gameStageStyles"
-import { items } from "../../../global/utils/items"
 
-const GameStage = ({ setMessage, setStage, step, setStep }) => {
+const GameStage = ({
+  setMessage,
+  setStage,
+  step,
+  setStep,
+  setFoodItems,
+  foodItems,
+}) => {
   const [header, setHeader] = useState({
     header: "alight, chef, prove it.",
     subHeader:
       "click on the first ingredient or tool you need to make a pot of pasta",
   })
-  const [foodItems, setFoodItems] = useState([...items])
   const [stoveGlow, setStoveGlow] = useState(false)
+
   useEffect(() => {
     checkStep()
   }, [step])
@@ -79,7 +85,6 @@ const GameStage = ({ setMessage, setStage, step, setStep }) => {
         if (step.item === "pasta") {
           setTimeout(() => {
             setStage("finished")
-            setFoodItems([...items])
           }, 1500)
           setHeader({
             header: "Amazing, truly well done!",
@@ -113,11 +118,11 @@ const GameStage = ({ setMessage, setStage, step, setStep }) => {
   const sendToFinished = () => {
     setMessage(step.wrongMSG)
     setStage("finished")
-    setStep(0)
+    setStep({ number: 0, item: "", wrongMSG: "" })
   }
 
-  const updateItemSteps = (updatedItemsMessageArray) => {
-    let changedGoodNames
+  const updateItemSteps = () => {
+    let changedGoodNames = []
     switch (step.number) {
       case 1:
         changedGoodNames = foodItems.map((item) => {
@@ -233,34 +238,6 @@ const GameStage = ({ setMessage, setStage, step, setStep }) => {
               return item
             case "pasta":
               item.wrongMSG = "this pasta ain’t gonna boil itself"
-              return item
-            default:
-              return item
-          }
-        })
-        setFoodItems(changedGoodNames)
-        break
-      case 5:
-        changedGoodNames = foodItems.map((item) => {
-          item.name === "sink" ||
-          item.name === "pot" ||
-          item.name === "salt" ||
-          item.name === "pasta"
-            ? (item.selected = true)
-            : (item.selected = false)
-          switch (item.name) {
-            case "pepper":
-              item.wrongMSG = "fine, just take it already! Pepper is yours"
-              return item
-            case "pan":
-              item.wrongMSG = "you woke up this morning and chose violence"
-              return item
-            case "oil":
-              item.wrongMSG =
-                "the oil accents the boiling salt water in such a way..."
-              return item
-            case "butter":
-              item.wrongMSG = "I too love butter and hot water"
               return item
             default:
               return item

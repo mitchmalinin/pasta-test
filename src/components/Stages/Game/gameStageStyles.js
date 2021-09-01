@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { theme } from "../../../global/styles/styles"
 
 export const GameStageContainer = styled.div`
   .stove {
@@ -10,6 +11,15 @@ export const GameStageContainer = styled.div`
       stoveGlow
         ? "drop-shadow(3px 3px 10px #f7fc01) drop-shadow(-3px -3px 10px #f7fc01)"
         : "none"};
+  }
+
+  @media only screen and (min-width: 1020px) {
+    min-width: 600px;
+    margin-top: 0.5em;
+    align-self: flex-start;
+    img {
+      height: 200px;
+    }
   }
 `
 export const Header = styled.h2`

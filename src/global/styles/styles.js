@@ -16,4 +16,9 @@ export const AppContainer = styled.div`
   font-family: "Roboto", sans-serif;
   padding: 1em;
   overflow-y: hidden;
+
+  @media only screen and (min-width: 1020px) {
+    display: grid;
+    place-items: center;
+  }
 `
