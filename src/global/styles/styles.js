@@ -10,7 +10,7 @@ export const theme = {
 
 export const AppContainer = styled.div`
   min-height: 100vh;
-
+  position: relative;
   background-color: ${theme.bgColor};
   color: ${theme.textColor};
   font-family: "Roboto", sans-serif;

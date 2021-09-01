@@ -3,9 +3,13 @@ import styled from "styled-components"
 export const GameStageContainer = styled.div`
   .stove {
     position: absolute;
-    bottom: -96px;
+    bottom: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
+    filter: ${({ stoveGlow }) =>
+      stoveGlow
+        ? "drop-shadow(3px 3px 10px #f7fc01) drop-shadow(-3px -3px 10px #f7fc01)"
+        : "none"};
   }
 `
 export const Header = styled.h2`
