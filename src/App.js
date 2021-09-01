@@ -4,7 +4,7 @@ import GameStage from "./components/Stages/Game/GameStage"
 import FinishedStage from "./components/Stages/Finished/FinishedStage"
 import { AppContainer } from "./global/styles/styles"
 const App = () => {
-  const [stage, setStage] = useState("game")
+  const [stage, setStage] = useState("welcome")
   const [message, setMessage] = useState("")
   const [step, setStep] = useState({
     number: 0,

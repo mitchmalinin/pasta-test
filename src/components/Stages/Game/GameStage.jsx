@@ -26,12 +26,12 @@ const GameStage = ({ setMessage, setStage, step, setStep }) => {
       case 1:
         if (step.item === "pot") {
           setTimeout(() => {
-            setHeader({
-              header: "ok...you're impressive. What's next?",
-              subHeader: "",
-            })
             updateItemSteps()
           }, 1500)
+          setHeader({
+            header: "ok...you're impressive. What's next?",
+            subHeader: "",
+          })
         } else {
           sendToFinished()
         }
@@ -39,12 +39,12 @@ const GameStage = ({ setMessage, setStage, step, setStep }) => {
       case 2:
         if (step.item === "sink") {
           setTimeout(() => {
-            setHeader({
-              header: "now you're just showing off. keep it going!",
-              subHeader: "",
-            })
             updateItemSteps()
           }, 1500)
+          setHeader({
+            header: "now you're just showing off. keep it going!",
+            subHeader: "",
+          })
         } else {
           sendToFinished()
         }
@@ -52,12 +52,12 @@ const GameStage = ({ setMessage, setStage, step, setStep }) => {
       case 3:
         if (step.item === "salt") {
           setTimeout(() => {
-            setHeader({
-              header: "you're going sicko mode. almost there...what's next?",
-              subHeader: "",
-            })
             updateItemSteps()
           }, 1500)
+          setHeader({
+            header: "you're going sicko mode. almost there...what's next?",
+            subHeader: "",
+          })
         } else {
           sendToFinished()
         }
@@ -65,12 +65,12 @@ const GameStage = ({ setMessage, setStage, step, setStep }) => {
       case 4:
         if (step.item === "stove") {
           setTimeout(() => {
-            setHeader({
-              header: "you're a pasta prodigy, whats the last step?",
-              subHeader: "",
-            })
             updateItemSteps()
           }, 1500)
+          setHeader({
+            header: "you're a pasta prodigy, whats the last step?",
+            subHeader: "",
+          })
         } else {
           sendToFinished()
         }
@@ -78,12 +78,13 @@ const GameStage = ({ setMessage, setStage, step, setStep }) => {
       case 5:
         if (step.item === "pasta") {
           setTimeout(() => {
-            setHeader({
-              header: "Amazing, truly well done!",
-              subHeader: "",
-            })
             setStage("finished")
+            setFoodItems([...items])
           }, 1500)
+          setHeader({
+            header: "Amazing, truly well done!",
+            subHeader: "",
+          })
         } else {
           sendToFinished()
         }
