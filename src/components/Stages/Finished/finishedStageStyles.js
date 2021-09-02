@@ -3,7 +3,7 @@ import { theme } from "../../../global/styles/styles"
 
 export const FinishedGameContainer = styled.div`
   display: grid;
-  gap: 2.5em;
+  gap: 2em;
   margin-top: 3em;
 
   .inputContainer {
@@ -45,4 +45,5 @@ export const BTN = styled.button`
   border-radius: 25px;
   padding: 1em 1.2em;
   width: 250px;
+  color: ${theme.btnBackgroundDark};
 `

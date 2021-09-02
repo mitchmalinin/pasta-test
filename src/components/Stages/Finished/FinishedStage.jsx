@@ -91,7 +91,10 @@ const FinishedStage = ({ message, step, setStep, setStage }) => {
           ? "we could use an expert like you"
           : "learn how to  cook pasta (and other things)."}
       </MessageContainer>
-      <ActionContainer>join the waitlist for Pepper today.</ActionContainer>
+      <ActionContainer>join the waitlist for Pepper today.*</ActionContainer>
+      <MessageContainer>
+        *and be entered to win a years worth supply of pasta.
+      </MessageContainer>
       <div className="inputContainer">
         <UserInput
           placeholder="Email"
